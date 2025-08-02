@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 from tensorflow.keras.applications.efficientnet import preprocess_input
 
-model = tf.keras.models.load_model("C:/Users/hemag/Downloads/animal_classifier_model.keras")
+model = tf.keras.models.load_model("Path of model weights from your system")
 
 class_names = ['antelope', 'badger', 'bat', 'bear', 'bee', 'beetle', 'bison', 'boar', 'butterfly', 'cat', 'caterpillar', 'chimpanzee', 'cockroach', 'cow', 'coyote', 'crab', 'crow', 'deer', 'dog', 'dolphin', 'donkey', 'dragonfly', 'duck', 'eagle', 'elephant', 'flamingo', 'fly', 'fox', 'goat', 'goldfish', 'goose', 'gorilla', 'grasshopper', 'hamster', 'hare', 'hedgehog', 'hippopotamus', 'hornbill', 'horse', 'hummingbird', 'hyena', 'jellyfish', 'kangaroo', 'koala', 'ladybugs', 'leopard', 'lion', 'lizard', 'lobster', 'mosquito', 'moth', 'mouse', 'octopus', 'okapi', 'orangutan', 'otter', 'owl', 'ox', 'oyster', 'panda', 'parrot', 'pelecaniformes', 'penguin', 'pig', 'pigeon', 'porcupine', 'possum', 'raccoon', 'rat', 'reindeer', 'rhinoceros', 'sandpiper', 'seahorse', 'seal', 'shark', 'sheep', 'snake', 'sparrow', 'squid', 'squirrel', 'starfish', 'swan', 'tiger', 'turkey', 'turtle', 'whale', 'wolf', 'wombat', 'woodpecker', 'zebra']
 
@@ -26,4 +26,5 @@ if uploaded_file:
         st.markdown(f"### Prediction: Unknown")
     else:
         st.markdown(f"### Prediction: `{predicted_class}`")
+
         st.markdown(f"Confidence: `{confidence:.2f}`")
